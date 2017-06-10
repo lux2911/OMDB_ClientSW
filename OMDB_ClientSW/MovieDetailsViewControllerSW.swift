@@ -99,7 +99,7 @@ import UIKit
 				{
 					DispatchQueue.main.async {
 					self.dismissSpinner()
-						self.showError(error: error)
+						self.showError((Error?.localizedDescription)!)
 					}
 				}
 				
@@ -109,7 +109,7 @@ import UIKit
 			{
 				DispatchQueue.main.async {
 					self.dismissSpinner()
-					self.showError(error: Error!)
+					self.showError((Error?.localizedDescription)!)
 				}
 			}
 			
@@ -120,9 +120,9 @@ import UIKit
 	}
 	
 	
-	func showError(error : Error)
+	func showError(_ msg : String)
 	{
-		let ac = UIAlertController.init(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+		let ac = UIAlertController.init(title: "Error", message: msg, preferredStyle: UIAlertControllerStyle.alert)
 		let alert = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: nil)
 		
 		ac.addAction(alert)

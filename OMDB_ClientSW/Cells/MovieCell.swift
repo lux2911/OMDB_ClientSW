@@ -44,8 +44,7 @@ class MovieCell: UITableViewCell {
                             {
 								self.imgMovie.image = aImage
 							}
-						
-						
+												
 						
 					}
 					else
@@ -60,20 +59,17 @@ class MovieCell: UITableViewCell {
                                 }
                                 
                            
-						}
+                            }
+									
 							
+						 catch  {
 							
-							
-						catch  {
-							
-						}
+                                }
 						
 						
 						
 					}
-					
-										
-				
+						
 				
 			}
 			

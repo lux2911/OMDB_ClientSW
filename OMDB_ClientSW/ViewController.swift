@@ -43,7 +43,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 		self.tableView.dataSource = self
 		
 		self.tableView.rowHeight=70;
-		//self.tableView.tableHeaderView=nil;
+		
 		self.tableView.tableFooterView=self.tableFooter()
 		
 		

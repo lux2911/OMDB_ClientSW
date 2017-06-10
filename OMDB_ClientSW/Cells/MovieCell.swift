@@ -25,11 +25,11 @@ class MovieCell: UITableViewCell {
 			
 			
 			
-			if (self.poster != "N/A")
+			if let poster = self.poster , poster != "N/A"
 			{
 				
 										
-					let request = URLRequest.init(url: URL.init(string: self.poster)! )
+					let request = URLRequest.init(url: URL.init(string: poster)! )
 					
 					let cachedResponse = URLCache.shared.cachedResponse(for: request)
 					
@@ -50,7 +50,7 @@ class MovieCell: UITableViewCell {
 					else
 					{
 						do {
-							try aImage =  UIImage.init(data: Data.init(contentsOf: URL.init(string: self.poster)!))
+							try aImage =  UIImage.init(data: Data.init(contentsOf: URL.init(string: poster)!))
                             
                             
                                 if let aImage = aImage
